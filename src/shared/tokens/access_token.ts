@@ -1,0 +1,1 @@
+export const accessToken = 'Bearer ' + localStorage.getItem('accessToken');

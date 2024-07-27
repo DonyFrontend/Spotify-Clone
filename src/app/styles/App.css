@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .navBar{
+        display: flex;
+        flex-direction: column;
+        gap: 0 10px;
+    }
+    .navText{
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
