@@ -7,10 +7,10 @@ function App() {
   return (
     <div className='flex flex-col'>
       <div className='flex justify-between'>
-        <div className='w-[25%]'>
+        <div className='w-[20%]'>
           <NavBar />
         </div>
-        <div className='w-[75%]'>
+        <div className='w-[80%] p-4'>
           <RouterApp />
         </div>
       </div>

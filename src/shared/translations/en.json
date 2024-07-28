@@ -3,5 +3,15 @@
     "search": "Search",
     "library": "Library",
     "create_playlist": "Create Playlist",
-    "liked_songs": "Liked Songs"
+    "liked_songs": "Liked Songs",
+    "forgot_password": "Forgot your password?",
+    "login": "LOG IN",
+    "email": {
+        "placeholder": "Email address",
+        "text": "Email address"
+    },
+    "password": {
+        "placeholder": "Password",
+        "text": "Password"
+    }
 }

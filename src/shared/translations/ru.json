@@ -3,5 +3,15 @@
     "search": "Поиск",
     "library": "Моя медиатека",
     "create_playlist": "Создать плейлист",
-    "liked_songs": "Любимые"
+    "liked_songs": "Любимые",
+    "forgot_password": "Забыли пароль?",
+    "login": "Войти",
+    "email": {
+        "placeholder": "Email",
+        "text": "Email адрес"
+    },
+    "password": {
+        "placeholder": "Пароль",
+        "text": "Пароль"
+    }
 }

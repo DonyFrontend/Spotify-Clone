@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer components {
+    .routeHeight{
+        height: 86svh;
+        border-radius: 10px;
+        overflow-y: scroll;
+    }
     .navBar{
         display: flex;
         flex-direction: column;
@@ -12,4 +17,12 @@
         font-size: 18px;
         font-weight: bold;
     }
+}
+
+::-webkit-scrollbar{
+    background-color: #181818;
+}
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 15px;
 }

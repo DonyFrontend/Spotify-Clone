@@ -2,10 +2,10 @@ import { FC } from 'react'
 
 const Home: FC = () => {
   return (
-    <div>
+    <div className='bg-[#333333] routeHeight'>
       
     </div>
   )
 }
 
-export default Home;
+export {Home};
