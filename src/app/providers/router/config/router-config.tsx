@@ -1,12 +1,9 @@
 import Home from "src/pages/home";
 import Search from "src/pages/search";
-import LogIn from "src/pages/auth/login";
+import { LogIn } from "src/features/auth/login";
 import { AppRoutes, RouteHome, RouteLogIn, RouteSearch } from "src/shared/const/router";
+import { Router } from "../types/router-type";
 
-export type Router = {
-    path: string,
-    element: React.ReactNode
-}
 
 export const RouterConfig: Record<AppRoutes, Router> = {
     [AppRoutes.HOME]: {

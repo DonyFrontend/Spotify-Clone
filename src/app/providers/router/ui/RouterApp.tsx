@@ -3,9 +3,11 @@ import { RouterConfig } from "../config/router-config"
 import { FC } from "react";
 
 const RouterApp: FC = () => {
+  
+
   return (
     <Routes>
-        {Object.values(RouterConfig).map(item => <Route path={item.path} element={item.element}/>)}
+        {Object.values(RouterConfig).map((item, index) => <Route key={index} path={item.path} element={item.element}/>)}
     </Routes>
   )
 }

@@ -15,7 +15,7 @@ import TranslateButton from "src/shared/ui/translateButton/ui/TranslateButton";
 import { useNavigate } from "react-router";
 
 const NavBar: FC = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const navigation = [
@@ -48,19 +48,19 @@ const NavBar: FC = () => {
   return (
     <nav className="p-4 h-[90svh] flex flex-col items-start justify-between">
       <div className="flex flex-col gap-y-12">
-      <div className="cursor-pointer" onClick={() => navigate('/')}>
-        <img src={AppLogo} alt="Error!" />
-      </div>
-      <div className="navBar">
-        {navigation.map((item, index) => <CustomLink key={index} activeImage={item.activeImage} image={item.image} text={item.text} to={item.to}/>)}
+        <div className="cursor-pointer" onClick={() => navigate('/')}>
+          <img src={AppLogo} alt="Error!" />
+        </div>
+        <div className="navBar">
+          {navigation.map((item, index) => <CustomLink key={index} activeImage={item.activeImage} image={item.image} text={item.text} to={item.to} />)}
+        </div>
+        <div>
+          <CreatePlaylistButton />
+          {likedSongs.map((item, index) => <CustomLink key={index} image={item.image} to={item.to} text={item.text} />)}
+        </div>
       </div>
       <div>
-        <CreatePlaylistButton/>
-        {likedSongs.map(item => <CustomLink image={item.image} to={item.to} text={item.text}/>)}
-      </div>
-      </div>
-      <div>
-        <TranslateButton image={LanguageIcon}/>
+        <TranslateButton image={LanguageIcon} />
       </div>
     </nav>
   )

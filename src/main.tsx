@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './shared/const/i18n.ts'
-import LogIn from './pages/auth/login/index.ts'
+import {LogIn} from './features/auth/login/index.ts'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

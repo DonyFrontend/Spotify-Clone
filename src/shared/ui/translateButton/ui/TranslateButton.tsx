@@ -10,12 +10,16 @@ const TranslateButton: FC<ITranslateButton> = (props) => {
     i18n.changeLanguage(lang);
   }
 
+  const languages = [
+    {lang: 'ru', text: 'Русский'},
+    {lang: 'en', text: 'English'},
+  ]
+  
   return (
     <div className="p-3 border-[#727272] border rounded-[500px] flex gap-x-2 px-4 py-2 items-center">
       <img src={image} alt="Error!" />
       <select onClick={e => handleChangeLanguage(e.currentTarget.value)} className="bg-black text-white text-lg cursor-pointer">
-        <option value="ru">Русский</option>
-        <option value="en">English</option>
+        {languages.map((item, index) => <option key={index} value={item.lang}>{item.text}</option>)}
       </select>
     </div>
   )
