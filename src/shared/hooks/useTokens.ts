@@ -18,7 +18,8 @@ function useTokens(): void {
             )
     }, [])
 
-    localStorage.setItem('accessToken', accessToken);    
+    localStorage.setItem('bearerAccessToken', 'Bearer ' + accessToken);
+    localStorage.setItem('accessToken', accessToken);
 }
 
 export default useTokens;

@@ -13,5 +13,7 @@
     "password": {
         "placeholder": "Пароль",
         "text": "Пароль"
-    }
+    },
+    "popular_playlists": "Популярные плэйлисты",
+    "go_to_playlist": "К плейлисту"
 }

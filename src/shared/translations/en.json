@@ -13,5 +13,7 @@
     "password": {
         "placeholder": "Password",
         "text": "Password"
-    }
+    },
+    "popular_playlists": "Popular playlists",
+    "go_to_playlist": "Go to playlist"
 }

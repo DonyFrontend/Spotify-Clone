@@ -1,8 +1,15 @@
 import './styles/App.css';
 import RouterApp from './providers/router/ui/RouterApp';
 import { NavBar } from 'src/widgets/navbar';
+import useTokens from 'src/shared/hooks/useTokens';
 
 function App() {
+  useTokens();
+  const isToken = localStorage.getItem("bearerAccessToken");
+
+  if (isToken == null) {
+    return <h1>Loading</h1>
+  }
 
   return (
     <div className='flex flex-col'>

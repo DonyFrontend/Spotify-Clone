@@ -1,7 +1,6 @@
 import Home from "src/pages/home";
 import Search from "src/pages/search";
-import { LogIn } from "src/features/auth/login";
-import { AppRoutes, RouteHome, RouteLogIn, RouteSearch } from "src/shared/const/router";
+import { AppRoutes, RouteHome, RouteSearch } from "src/shared/const/router";
 import { Router } from "../types/router-type";
 
 
@@ -14,8 +13,4 @@ export const RouterConfig: Record<AppRoutes, Router> = {
         path: RouteSearch(),
         element: <Search/>
     },
-    [AppRoutes.LOGIN]: {
-        path: RouteLogIn(),
-        element: <LogIn/>
-    }
 }
