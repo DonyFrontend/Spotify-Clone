@@ -7,6 +7,21 @@ export interface IAlbumArtists {
     id?: string
 }
 
+export interface copyrights {
+    text: string,
+    type: string
+}
+
+export interface AlbumTrackSchema {
+    artists: IAlbumArtists[],
+    disc_number?: number,
+    duration_ms: number,
+    href: string,
+    name: string,
+    type: string,
+    track_number?: number,
+}
+
 export interface IAlbum {
     album_type: string,
     total_tracks: string,
@@ -17,7 +32,8 @@ export interface IAlbum {
     release_date: string,
     type: string,
     artists: IAlbumArtists[],
-    tracks: []
+    tracks: {items: AlbumTrackSchema[]},
+    copyrights: copyrights[]
 }
 
 

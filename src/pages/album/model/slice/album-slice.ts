@@ -13,8 +13,9 @@ const initialState: initialStateSchema<IAlbum> = {
         name: "",
         release_date: "",
         total_tracks: "",
-        tracks: [],
-        type: ""
+        tracks: {items: []},
+        type: "",
+        copyrights: []
     },
     isLoading: true,
     error: null
