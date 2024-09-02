@@ -7,7 +7,6 @@ export const spotifyApi = createApi({
         baseUrl: API_URL,
         prepareHeaders: (headers) => {
             const token = localStorage.getItem("token");
-            console.log(token);
             if (token) {
                 headers.set("Authorization", token)
             }

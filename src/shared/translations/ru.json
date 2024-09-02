@@ -14,6 +14,10 @@
         "placeholder": "Пароль",
         "text": "Пароль"
     },
-    "popular_playlists": "Популярные плэйлисты",
-    "go_to_playlist": "К плейлисту"
+    "popular_playlists": "Популярные плэйлисты и синглы",
+    "go_to_playlist": "К плейлисту",
+    "release_date": "Дата релиза",
+    "total_tracks": "Всего треков",
+    "go_to_back": "Назад",
+    "go_to_artist": "Перейти к исполнителю"
 }

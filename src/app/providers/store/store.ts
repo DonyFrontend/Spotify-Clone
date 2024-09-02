@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
+import { albumReducer } from "src/pages/album/model/slice/album-slice";
 import { spotifyApi } from "src/shared/api/spotify-api";
 
 const store = configureStore({
     reducer: {
-        [spotifyApi.reducerPath]: spotifyApi.reducer ,
+        [spotifyApi.reducerPath]: spotifyApi.reducer,
+        album: albumReducer
     },
     middleware: (getDefaultMiddleware) => {
         return getDefaultMiddleware().concat(spotifyApi.middleware)

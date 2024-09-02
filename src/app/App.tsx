@@ -13,7 +13,7 @@ function App() {
         <div className='w-[20%]'>
           <NavBar />
         </div>
-        <div className='w-[80%] p-4'>
+        <div className='w-[90%] p-4'>
           <RouterApp />
         </div>
       </div>

@@ -14,6 +14,10 @@
         "placeholder": "Password",
         "text": "Password"
     },
-    "popular_playlists": "Popular playlists",
-    "go_to_playlist": "Go to playlist"
+    "popular_playlists": "Popular playlists and singles",
+    "go_to_playlist": "Go to playlist",
+    "release_date": "Release date",
+    "total_tracks": "Total tracks",
+    "go_to_back": "Go to back",
+    "go_to_artist": "Go to artist"
 }

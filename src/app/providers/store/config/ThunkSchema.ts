@@ -7,12 +7,12 @@ export interface ThunkExtraArg {
 
 export interface ThunkConfig<T> {
     rejectValue: T,
-    extra: ThunkExtraArg,
+    extra?: ThunkExtraArg,
     dispatch?: Dispatch
 }
 
-export interface initialStateSchema {
+export interface initialStateSchema<T> {
     isLoading: boolean,
-    error?: null | unknown,
-    data: [] | object
+    error?: null | true,
+    data: T
 }

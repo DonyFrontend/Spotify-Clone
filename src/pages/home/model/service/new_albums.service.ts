@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { INewReleases } from '../types/albums-schema';
+import { INewReleases } from '../types/newRel-schema';
 import { ThunkConfig } from 'src/app/providers/store/config/ThunkSchema';
 
 export const getNewAlbumsTC = createAsyncThunk<INewReleases, undefined, ThunkConfig<string>>(
