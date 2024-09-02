@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { initialStateSchema } from "src/app/providers/store/config/ThunkSchema";
 import { getNewAlbumsTC } from "../service/new_albums.service";
+import { INewReleases } from "../types/newRel-schema";
 
-const initialState: initialStateSchema = {
+const initialState: initialStateSchema<INewReleases> = {
     isLoading: true,
     error: null,
-    data: []
+    data: {albums: {items: []}}
 }
 
 const newAlbumsSlice = createSlice({
@@ -18,7 +19,7 @@ const newAlbumsSlice = createSlice({
             state.data = action.payload;
         }),
         builder.addCase(getNewAlbumsTC.rejected, state => {
-            state.error = 'Error!'
+            state.error = true;
         })
     },
 })
