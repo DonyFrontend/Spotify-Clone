@@ -5,11 +5,7 @@ import useTokens from 'src/shared/hooks/useTokens';
 
 function App() {
   useTokens();
-  const isToken = localStorage.getItem("bearerAccessToken");
-
-  if (isToken == null) {
-    return <h1>Loading</h1>
-  }
+  
 
   return (
     <div className='flex flex-col'>

@@ -6,16 +6,16 @@ import { INewReleases } from '../model/types/albums-schema';
 const Home: FC = () => {
   const { t } = useTranslation();
   const [newRel, setNewRel] = useState<INewReleases>();
-  console.log(localStorage.getItem("bearerAccessToken"));
+  console.log(localStorage.getItem("token"));
 
 
-  const { isLoading, isError, data, error } = useGetNewReleasesQuery({ data: localStorage.getItem("bearerAccessToken") });
+  const { isLoading, isError, data, error } = useGetNewReleasesQuery({});
 
   useEffect(() => {
     if (isError) {
       console.log(error);
     } else {
-      setNewRel(data), console.log(data);
+      setNewRel(data), console.log(data); 
     }
   }, [error, isError, data])
 
