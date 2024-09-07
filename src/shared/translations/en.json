@@ -20,6 +20,7 @@
     "total_tracks": "Total tracks",
     "go_to_back": "Go to back",
     "go_to_artist": "Go to artist",
-    "copy_link": "Copy link",
-    "tracks": "Tracks"
+    "copy_link": "Copy link on album",
+    "tracks": "Tracks",
+    "link_copied": "Link copied"
 }

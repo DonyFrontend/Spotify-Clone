@@ -5,7 +5,6 @@ import useTokens from 'src/shared/hooks/useTokens';
 
 function App() {
   useTokens();
-  
 
   return (
     <div className='flex flex-col'>

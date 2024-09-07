@@ -20,6 +20,7 @@ export interface AlbumTrackSchema {
     name: string,
     type: string,
     track_number?: number,
+    external_urls: { spotify: string }
 }
 
 export interface IAlbum {
@@ -27,13 +28,14 @@ export interface IAlbum {
     total_tracks: string,
     href: string,
     id: string,
-    images: IImage[],   
+    images: IImage[],
     name: string,
     release_date: string,
     type: string,
     artists: IAlbumArtists[],
-    tracks: {items: AlbumTrackSchema[]},
-    copyrights: copyrights[]
+    tracks: { items: AlbumTrackSchema[] },
+    copyrights: copyrights[],
+    external_urls: {spotify: string},
 }
 
 

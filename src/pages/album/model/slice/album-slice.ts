@@ -15,7 +15,8 @@ const initialState: initialStateSchema<IAlbum> = {
         total_tracks: "",
         tracks: {items: []},
         type: "",
-        copyrights: []
+        copyrights: [],
+        external_urls: {spotify: ""}
     },
     isLoading: true,
     error: null
