@@ -25,10 +25,10 @@ const Artist = () => {
         <div className="routeHeight bg-[#282828] relative">
             {/* <div style={{backgroundImage: `url(${data.images[0].url})`}} className={`w-full h-[38svh] bg-no-repeat`}>
             </div> */}
-            <div className="w-full h-[43svh] relative text-yellow-400">
+            <div className="w-full h-[43svh] text-white relative">
                 <img src={data.images[0].url} alt="Error!" className="w-full h-[43svh] object-cover overflow-hidden object-center" />
-                <p className="absolute bottom-[50px] left-5 font-extrabold text-[60px]">{data.name}</p>
-                <p title={`${data.followers.total} ${t("followers")}`} className="absolute bottom-2 left-5 text-[19px]">{data.followers.total} {t("followers")}</p>
+                <p className="absolute bottom-[50px] left-5 outline-1 text-outline font-extrabold text-[60px]">{data.name}</p>
+                <p title={`${data.followers.total} ${t("followers")}`} className="absolute bottom-2 left-5 text-under-outline text-[19px]">{data.followers.total} {t("followers")}</p>
             </div>
 
             <div className="p-3 flex flex-col gap-y-3 text-white">
