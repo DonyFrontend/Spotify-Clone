@@ -5,12 +5,13 @@ export interface IArtist {
         total: number,
         href?: string
     },
-    genders?: string[],
+    genres?: string[],
     href: string,
     id: string,
     images: IImage[],
     name: string,
     popularity: number,
     type: string,
-    url: string
+    url: string,
+    external_urls: {spotify: string}
 }

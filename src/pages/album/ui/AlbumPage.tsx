@@ -23,8 +23,8 @@ const AlbumPage: FC = () => {
   }
 
   if (error != null) {
-    console.log(error);
-  } else console.log(data);
+    return <h1 className="text-white">Error!</h1>
+  } 
 
   function copyLink(link: string) {
     copy(link);
@@ -33,7 +33,7 @@ const AlbumPage: FC = () => {
 
   return (
     <div className="bg-[#333333] routeHeight p-3 flex flex-col gap-y-3">
-      <div className="text-white font-medium text-[20px] cursor-pointer" onClick={() => navigate(-1)}>{t("go_to_back")}</div>
+      <button className="text-white font-medium text-[20px] cursor-pointer" onClick={() => navigate(-1)}>{t("go_to_back")}</button>
       <header className="flex gap-x-6 items-end h-[27svh]">
         <img className="rounded-[10px]" src={data.images[1].url} height={200} width={200} alt="Error!" />
         <div className="text-white">

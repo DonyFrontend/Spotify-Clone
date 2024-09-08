@@ -15,7 +15,8 @@ const initialState: initialStateSchema<IArtist> = {
         popularity: 0,
         type: '',
         url: '',
-        genders: []
+        genres: [],
+        external_urls: {spotify: ''}
     }
 }
 
