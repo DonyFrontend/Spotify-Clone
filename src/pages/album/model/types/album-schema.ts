@@ -17,6 +17,7 @@ export interface AlbumTrackSchema {
     disc_number?: number,
     duration_ms: number,
     href: string,
+    id: string,
     name: string,
     type: string,
     track_number?: number,

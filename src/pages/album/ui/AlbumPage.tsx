@@ -24,7 +24,8 @@ const AlbumPage: FC = () => {
 
   if (error != null) {
     return <h1 className="text-white">Error!</h1>
-  } 
+  }
+  
 
   function copyLink(link: string) {
     copy(link);
@@ -49,7 +50,7 @@ const AlbumPage: FC = () => {
       </div>
       <div className="w-full flex justify-center pb-3">
         <div className="flex flex-col gap-y-5 w-[97%]">
-          {data.tracks.items.map((item, index) => <Tracks external_urls={item.external_urls} key={index} duration_ms={item.duration_ms} href={item.href} name={item.name} type={item.type} artists={item.artists} disc_number={item.disc_number} track_number={item.track_number} />)}
+          {data.tracks.items.map((item, index) => <Tracks id={item.id} external_urls={item.external_urls} key={index} duration_ms={item.duration_ms} href={item.href} name={item.name} type={item.type} artists={item.artists} disc_number={item.disc_number} track_number={item.track_number} />)}
         </div>
       </div>
       <div className="flex flex-col gap-y-2">

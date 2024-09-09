@@ -35,7 +35,6 @@ const Artist = () => {
                 <p className="text-[18px]">{t("popularity")} {data.popularity}%</p>
                 <p>P.S: {t("popularity_desc")}</p>
                 <br />
-                <a href={data.external_urls.spotify} target="_blank" className="underline hover:text-blue-600 transition-colors">{t("artist_uri")}</a>
             </div>
             <div className="absolute bottom-14 pl-3 flex gap-x-4 items-center">
                 <p className="text-[19px] font-medium text-white">{t("genres_of_artist")}</p>

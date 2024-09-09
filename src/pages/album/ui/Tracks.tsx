@@ -11,7 +11,7 @@ const Tracks = (data: AlbumTrackSchema) => {
             <div className="flex gap-x-3 items-center w-[45%]">
                 <div className="w-[4%]"><p>{data.track_number}</p></div>
                 <div>
-                    <p className="text-[19px] hover:underline">{data.name}</p>
+                    <p onClick={() => navigate(`/track/${data.id}`)} className="text-[19px] hover:underline">{data.name}</p>
                     <div className="flex gap-x-3">{data.artists.map((item, index) => <p key={index} className="text-[#c6c2c2] hover:underline" onClick={() => navigate(`/artist/${item.id}`)}>{item.name}</p>)} </div>
                 </div>
             </div>
