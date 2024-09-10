@@ -24,9 +24,11 @@
     "tracks": "Tracks",
     "link_copied": "Link copied",
     "followers": "Followers",
-    "popularity": "Popularity of artist:",
-    "popularity_desc": "The popularity of the artist. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks.",
+    "artist_popularity": "Popularity of artist:",
+    "artist_popularity_desc": "The popularity of the artist. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks.",
     "genres_of_artist": "Genres of artist:",
     "nullable_genres": "No data on genres",
-    "null_player": "In this moment we are dont having the player"
+    "null_player": "In this moment we are dont having the player",
+    "track_popularity": "Popularity of track:",
+    "track_popularity_desc": "The popularity of the track. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks."
 }

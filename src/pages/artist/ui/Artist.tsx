@@ -18,7 +18,6 @@ const Artist = () => {
     if (isLoading) {
         return <h1 className="text-white">Loading...</h1>
     } else if (error != null) console.log(error);
-    else console.log(data);
 
 
     return (
@@ -32,8 +31,8 @@ const Artist = () => {
             </div>
 
             <div className="p-3 flex flex-col gap-y-3 text-white">
-                <p className="text-[18px]">{t("popularity")} {data.popularity}%</p>
-                <p>P.S: {t("popularity_desc")}</p>
+                <p className="text-[18px]">{t("artist_popularity")} {data.popularity}%</p>
+                <p>P.S: {t("artist_popularity_desc")}</p>
                 <br />
             </div>
             <div className="absolute bottom-14 pl-3 flex gap-x-4 items-center">

@@ -3,10 +3,24 @@ import RouterApp from './providers/router/ui/RouterApp';
 import { NavBar } from 'src/widgets/navbar';
 import useTokens from 'src/shared/hooks/useTokens';
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
 
 function App() {
   useTokens();
   const { t } = useTranslation();
+
+  const token = localStorage.getItem("token");
+  const [isToken, setIsToken] = useState<string | null>();
+
+  useEffect(() => {
+    if (token) {
+      setIsToken(token);
+    }
+  }, [token, isToken])
+
+  if (isToken == null) {
+    return <h1 className='text-white'>Loading...</h1>
+  }
 
   return (
     <div className='flex flex-col'>
