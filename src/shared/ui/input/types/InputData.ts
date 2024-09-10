@@ -1,5 +1,5 @@
 export interface IInput{
-    text: string,
+    text?: string,
     placeholder: string,
     borderColor?: string,
     type: string,

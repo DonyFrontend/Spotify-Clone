@@ -3,7 +3,8 @@ export enum AppRoutes{
     HOME = 'auth',
     ALBUM = 'album',
     ARTIST = 'artist',
-    TRACK = 'track'
+    TRACK = 'track',
+    CATEGORY = 'category'
 }
 
 export const RouteSearch = () => '/search';
@@ -11,6 +12,7 @@ export const RouteHome = () => '/';
 export const RouteAlbum = () => '/album/:id'
 export const RouteArtist = () => '/artist/:id'
 export const RouteTrack = () => '/track/:id'
+export const RouteCategory = () => '/category/:id'
 
 export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.HOME]: RouteHome(),
@@ -18,4 +20,5 @@ export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.ALBUM]: RouteAlbum(),
     [AppRoutes.ARTIST]: RouteArtist(),
     [AppRoutes.TRACK]: RouteTrack(),
+    [AppRoutes.CATEGORY]: RouteCategory(),
 }

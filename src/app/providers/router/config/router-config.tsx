@@ -6,6 +6,7 @@ import { AlbumPage } from "src/pages/album";
 import { AppRoutes } from "src/shared/const/router";
 import { Artist } from "src/pages/artist";
 import { Track } from "src/pages/track";
+import { Category } from "src/pages/category";
 
 export const RouterConfig: Record<AppRoutes, Router> = {
     [AppRoutes.HOME]: {
@@ -27,5 +28,9 @@ export const RouterConfig: Record<AppRoutes, Router> = {
     [AppRoutes.TRACK]: {
         path: paths.RouteTrack(),
         element: <Track/>
+    },
+    [AppRoutes.CATEGORY]: {
+        path: paths.RouteCategory(),
+        element: <Category/>
     }
 }

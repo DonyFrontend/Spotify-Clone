@@ -28,7 +28,10 @@
     "artist_popularity_desc": "The popularity of the artist. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks.",
     "genres_of_artist": "Genres of artist:",
     "nullable_genres": "No data on genres",
-    "null_player": "In this moment we are dont having the player",
+    "null_player": "In this moment we are don`t having the player",
     "track_popularity": "Popularity of track:",
-    "track_popularity_desc": "The popularity of the track. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks."
+    "track_popularity_desc": "The popularity of the track. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks.",
+    "want_to_listen": "What do you want to find?",
+    "browse_all": "Browse all",
+    "go_to_genre": "Go to genre"
 }
