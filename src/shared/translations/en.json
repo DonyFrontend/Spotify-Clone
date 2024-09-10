@@ -14,8 +14,8 @@
         "placeholder": "Password",
         "text": "Password"
     },
-    "popular_playlists": "Popular playlists and singles",
-    "go_to_playlist": "Go to playlist",
+    "popular_playlists": "Popular albums and singles",
+    "go_to_album": "Go to album",
     "release_date": "Release date",
     "total_tracks": "Total tracks",
     "go_to_back": "Go to back",
@@ -33,5 +33,7 @@
     "track_popularity_desc": "The popularity of the track. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks.",
     "want_to_listen": "What do you want to find?",
     "browse_all": "Browse all",
-    "go_to_genre": "Go to genre"
+    "go_to_genre": "Go to genre",
+    "features_playlists": "Recommended playlists",
+    "go_to_playlist": "Go to playlist"
 }

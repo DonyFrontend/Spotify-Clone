@@ -16,8 +16,12 @@ export const spotifyApi = createApi({
     endpoints: (build) => ({
         getNewReleases: build.query({
             query: () => "v1/browse/new-releases"
+        }),
+        getPlaylists: build.query({
+            query: () => "v1/browse/featured-playlists"
         })
     })
 })
 
 export const { useGetNewReleasesQuery } = spotifyApi;
+export const {useGetPlaylistsQuery} = spotifyApi;
