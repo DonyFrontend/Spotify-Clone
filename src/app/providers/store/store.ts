@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { albumReducer } from "src/pages/album/model/slice/album-slice";
 import { artistReducer } from "src/pages/artist/model/slice/artist-slice";
+import { playlistReducer } from "src/pages/playlist/model/slice/playlistSlice";
 import { categoriesReducer } from "src/pages/search/model/slice/categories-slice";
 import { trackReducer } from "src/pages/track/model/slice/track-slice";
 import { spotifyApi } from "src/shared/api/spotify-api";
@@ -13,6 +14,7 @@ const store = configureStore({
         artist: artistReducer,
         track: trackReducer,
         categories: categoriesReducer,
+        playlist: playlistReducer,
     },
     middleware: (getDefaultMiddleware) => {
         return getDefaultMiddleware().concat(spotifyApi.middleware)

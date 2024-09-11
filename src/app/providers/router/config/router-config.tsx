@@ -7,6 +7,7 @@ import { AppRoutes } from "src/shared/const/router";
 import { Artist } from "src/pages/artist";
 import { Track } from "src/pages/track";
 import { Category } from "src/pages/category";
+import { Playlist } from "src/pages/playlist";
 
 export const RouterConfig: Record<AppRoutes, Router> = {
     [AppRoutes.HOME]: {
@@ -32,5 +33,9 @@ export const RouterConfig: Record<AppRoutes, Router> = {
     [AppRoutes.CATEGORY]: {
         path: paths.RouteCategory(),
         element: <Category/>
+    },
+    [AppRoutes.PLAYLIST]: {
+        path: paths.RoutePlaylist(),
+        element: <Playlist/>
     }
 }

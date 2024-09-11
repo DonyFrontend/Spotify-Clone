@@ -1,6 +1,6 @@
 import { IImage } from "src/shared/genericTypes/generic-types";
 
-export interface IPlaylist {
+export interface playlistsSchema {
     id: string,
     href: string,
     images: IImage[],
