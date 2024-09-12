@@ -7,7 +7,7 @@ const initialState: initialStateSchema<IPlaylist> = {
     isLoading: true,
     error: null,
     data: {
-        desciption: '',
+        description: '',
         followers: {href: '', total: 0},
         href: '',
         id: '',

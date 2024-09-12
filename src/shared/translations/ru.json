@@ -35,5 +35,9 @@
     "browse_all": "Всё остальное",
     "go_to_genre": "К жанру",
     "features_playlists": "Рекомендуемые плейлисты",
-    "go_to_playlist": "К плейлисту"
+    "go_to_playlist": "К плейлисту",
+    "hours": "часов",
+    "minutes": "минут",
+    "seconds": "секунд",
+    "approximately": "Примерно"
 }

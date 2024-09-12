@@ -35,5 +35,9 @@
     "browse_all": "Browse all",
     "go_to_genre": "Go to genre",
     "features_playlists": "Recommended playlists",
-    "go_to_playlist": "Go to playlist"
+    "go_to_playlist": "Go to playlist",
+    "hours": "hours",
+    "minutes": "minutes",
+    "seconds": "seconds",
+    "approximately": "Approximately"
 }

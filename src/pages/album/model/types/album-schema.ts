@@ -19,9 +19,9 @@ export interface AlbumTrackSchema {
     href: string,
     id: string,
     name: string,
-    type: string,
+    type?: string,
     track_number?: number,
-    external_urls: { spotify: string }
+    external_urls?: { spotify: string }
 }
 
 export interface IAlbum {

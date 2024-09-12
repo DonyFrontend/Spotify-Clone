@@ -19,6 +19,9 @@ const Artist = () => {
         return <h1 className="text-white">Loading...</h1>
     } else if (error != null) console.log(error);
 
+    console.log(data);
+    
+
 
     return (
         <div className="routeHeight bg-[#282828] relative">
@@ -37,7 +40,7 @@ const Artist = () => {
             </div>
             <div className="absolute bottom-14 pl-3 flex gap-x-4 items-center">
                 <p className="text-[19px] font-medium text-white">{t("genres_of_artist")}</p>
-                <div className="flex gap-x-2">{data.genres ? data.genres.map((item) => <em className="text-[18px] text-white">{item} / </em>) : t("nullable_genres")}</div>
+                <div className="flex gap-x-2">{data.genres?.length != 0 ? data.genres?.map((item) => <em className="text-[18px] text-white">{item} / </em>) : <p className="text-white text-[20px]">{t("nullable_genres")}</p>}</div>
             </div>
             <button onClick={() => navigate(-1)} className="text-white font-medium absolute bottom-2 pl-3 text-[20px] cursor-pointer">{t("go_to_back")}</button>
         </div>
