@@ -9,9 +9,9 @@ export interface IGenre {
 
 export interface GenreSchema {
     categories: {
-        href: string,
-        next: string,
-        total: number,
+        href?: string,
+        next?: string,
+        total?: number,
         items: IGenre[]
     }
 }

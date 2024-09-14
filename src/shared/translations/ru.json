@@ -39,5 +39,16 @@
     "hours": "часов",
     "minutes": "минут",
     "seconds": "секунд",
-    "approximately": "Примерно"
+    "approximately": "Примерно",
+    "choose_type": "Выберите тип, который хотите получить",
+    "album": "Альбом",
+    "artist": "Артист",
+    "playlist": "Плейлист",
+    "track": "Трэк",
+    "show": "Шоу",
+    "episode": "Эпизод",
+    "audiobook": "Аудиокнига",
+    "all": "Все",
+    "find": "Найти",
+    "press_type": "Нажмите на кнопку, чтобы найти"
 }

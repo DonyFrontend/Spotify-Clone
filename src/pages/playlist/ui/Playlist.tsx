@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
 import { useAppDispatch, useAppSelector } from "src/shared/hooks/useReduxHooks";
 import { getPlaylist } from "../model/service/getPlaylist.service";
 import { useTranslation } from "react-i18next";
-import { convertTime } from "../model/const/convertTime";
+// import { convertTime } from "../model/const/convertTime";
 import Tracks from "src/pages/album/ui/Tracks";
 
 const Playlist = () => {
@@ -12,29 +12,24 @@ const Playlist = () => {
     const { data, isLoading, error } = useAppSelector(state => state.playlist);
     const navigate = useNavigate();
     const { t } = useTranslation();
-    type timeType = number | undefined;
-    const [allTime, setAllTime] = useState<{ hours?: timeType, minutes?: timeType }>();
+    // type timeType = number | undefined;
+    // const [allTime, setAllTime] = useState<{ hours?: timeType, minutes?: timeType }>();
 
     useEffect(() => {
-        dispatch(getPlaylist({ id: params.id }));
-
-        let time = 0;
-        if (data.tracks.items) {
-            data.tracks.items.forEach(i => {
-                time += i.track.duration_ms;
-            })
-            const currentTime = convertTime(time);
-            setAllTime(currentTime);
-        }
+        dispatch(getPlaylist({ id: params.id }))
+            // .then(() => {
+            //     let time = 0;
+            //     data.tracks.items.forEach(i => {
+            //         time += i.track.duration_ms;
+            //     })
+            //     const currentTime = convertTime(time);
+            //     setAllTime(currentTime);
+            // })
     }, [dispatch, params])
 
     if (isLoading) {
         return <h1 className="text-white">Loading...</h1>
     } else if (error) return <h1 className="text-white">Error</h1>
-
-    console.log(data);
-
-
 
     return (
         <div className="routeHeight bg-[#333333] p-3 flex flex-col gap-y-3">
@@ -49,8 +44,10 @@ const Playlist = () => {
                     </div>
                     <div className="flex gap-x-2">
                         <p className="text-[18px] ">{data.owner.display_name} | </p>
-                        <p className="text-[18px] ">{data.tracks.total} {t("tracks")} | </p>
-                        <p className="text-[18px] ">{t("approximately")} {allTime?.hours + " " + t("hours")} {allTime?.minutes + " " + t("minutes")}</p>
+                        <p className="text-[18px] ">{data.tracks.total} {t("tracks")}</p>
+                        {/* <p className="text-[18px] ">
+                            {allTime?.hours && t("approximately")} {allTime?.hours + " " + t("hours")} {allTime?.minutes + " " + t("minutes")}
+                        </p> */}
                     </div>
                 </div>
             </header>

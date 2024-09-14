@@ -39,5 +39,16 @@
     "hours": "hours",
     "minutes": "minutes",
     "seconds": "seconds",
-    "approximately": "Approximately"
+    "approximately": "Approximately",
+    "choose_type": "Choose the type which you want to get",
+    "album": "Album",
+    "artist": "Artist",
+    "playlist": "Playlist",
+    "track": "Track",
+    "show": "Show",
+    "episode": "Episode",
+    "audiobook": "Audiobook",
+    "all": "All",
+    "find": "Find",
+    "press_type": "Click on the button to find"
 }

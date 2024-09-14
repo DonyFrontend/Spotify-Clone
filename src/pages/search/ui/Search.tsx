@@ -1,47 +1,47 @@
-import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "src/shared/hooks/useReduxHooks";
-import { getGenres } from "../model/service/getCategories.service";
 import { useTranslation } from "react-i18next";
-import Input from "src/shared/ui/input/ui/Input";
-import { changeLength } from "src/shared/const/changeLength";
-import { useNavigate } from "react-router";
+import Genres from "./Genres";
+import { useState } from "react";
+import { searchTC } from "../model/service/searchTC.service";
+import { useAppDispatch, useAppSelector } from "src/shared/hooks/useReduxHooks";
+import SearchData from "./SearchData";
 
 const Search = () => {
-  const dispatch = useAppDispatch();
-  const { data, isLoading, error } = useAppSelector(state => state.categories);
   const { t } = useTranslation();
-  const categories = data.categories.items;
-  const navigate = useNavigate();
+  const [search, setSearch] = useState<string>('');
+  const [type, setType] = useState<string>('');
+  const dispatch = useAppDispatch();
+  const { data } = useAppSelector(state => state.search);
 
-  useEffect(() => {
-    dispatch(getGenres())
-  }, [dispatch])
-
-  if (isLoading) {
-    return <h1 className="text-white">Loading...</h1>
-  } else if (error) return <h1>Error</h1>
-
-  console.log(data);
+  function searchData() {
+    if (search == '') {
+      alert('Заполните инпут!');
+    } else dispatch(searchTC({ q: search, type }));
+  }
 
   return (
     <div className="routeHeight flex flex-col gap-y-4 bg-[#333333]">
-      <div className="w-[30%]">
-        <Input placeholder={t("want_to_listen")} type="input" />
+      <div className="w-[30%] flex flex-col gap-y-2">
+        {/* <Input placeholder={t("want_to_listen")} type="input" /> */}
+        <div className="flex">
+          <input onChange={e => setSearch(e.target.value)} type="text" className="min-w-full border p-3 rounded-[4px]" placeholder={t("want_to_listen")} />
+          <button className="text-white bg-[#1ED760] px-8 rounded-[4px] font-medium hover:bg-[#198940] active:bg-[#1a6936]" onClick={searchData}>{t("find")}</button>
+        </div>
+        <div className="p-3 flex flex-col gap-y-3">
+          <p className="text-white font-medium text-[17px]">{t("choose_type")}</p>
+          <select name="categorySelect" onChange={e => setType(e.target.value)}>
+            <option value="">{t("all")}</option>
+            <option value="album">{t("album")}</option>
+            <option value="artist">{t("artist")}</option>
+            <option value="playlist">{t("playlist")}</option>
+            <option value="track">{t("track")}</option>
+            <option value="show">{t("show")}</option>
+            <option value="episode">{t("episode")}</option>
+            <option value="audiobook">{t("audiobook")}</option>
+          </select>
+        </div>
       </div>
 
-      <div className="p-3 flex flex-col gap-y-2">
-        <p className="text-white text-[20px] font-medium">{t("browse_all")}</p>
-        <section className="grid grid-cols-4 auto-rows-auto gap-3">
-          {categories.map((item, index) => <article onClick={() => navigate(`/category/${item.id}`)} key={index} className="flex flex-col gap-y-3 rounded-md bg-[#333333] hover:bg-[#2d2b2b] active:bg-[#181818] p-3 cursor-pointer transition-colors" title={t("go_to_genre")}>
-            <div>
-              <img src={item.icons[0].url} alt="Error!" />
-            </div>
-            <div>
-              <h1 className="text-lg text-white">{changeLength(item.name, 18, 18)}</h1>
-            </div>
-          </article>)}
-        </section>
-      </div>
+      {search.length == 0 ? <Genres /> : Object.keys(data).length == 0 ? <h1>{t("press_type")}</h1> : <SearchData data={data} />}
     </div>
   )
 }
